@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.ItemListContainer{
+  background-color: #545454;
+};
