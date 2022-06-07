@@ -52,27 +52,27 @@ function NavBar() {
             </nav>*/
 
             
-            <Navbar bg="warning" expand="lg">
+        <Navbar bg="warning" expand="lg">
             <Container>
-              <Navbar.Brand href="#home"><img src='./imagenes/logoEcommerce.png' className="logo-mag" alt="no se ve el logo"/></Navbar.Brand>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Brand href="#home"><img src='./imagenes/logoEcommerce.png' className="logo-mag" alt="no se ve el logo"/></Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Contacto</Nav.Link>
-                  <NavDropdown title="Productos" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Guitarras</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Bajos</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Percusión</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Teclados</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Vientos</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">Accesorios</NavDropdown.Item>
-                  </NavDropdown>
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#link">Contacto</Nav.Link>
+                    <NavDropdown title="Productos" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">Guitarras</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Bajos</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Percusión</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Teclados</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Vientos</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.4">Accesorios</NavDropdown.Item>
+                    </NavDropdown>
                 </Nav>
-              </Navbar.Collapse>
-              <CarWidget />
+                </Navbar.Collapse>
+                <CarWidget />
             </Container>
-          </Navbar>       
+        </Navbar>       
         
 
     );

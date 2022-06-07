@@ -6,8 +6,10 @@ import NavBar from './NavBar';
 function App() {
   return (
     <>
+      
       <NavBar />
       <ItemListContainer greeting='Hola k se?' />
+      
     </>
   );
 }
