@@ -40,3 +40,14 @@
 .ItemListContainer{
   background-color: #545454;
 };
+
+.ItemList{
+
+}
+
+.Cards{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  background-color: purple;
+}

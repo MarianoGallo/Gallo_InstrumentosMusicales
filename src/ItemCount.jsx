@@ -3,7 +3,7 @@ import { Button, ButtonGroup } from 'react-bootstrap';
 import { useState } from 'react';
 
 ;
-function ItemCount(onAdd ) {
+function ItemCount( onAdd ) {
 
     const stock = 5;
     const inicial = 1;
@@ -19,7 +19,7 @@ function ItemCount(onAdd ) {
         setContador( contador - 1 );
     }
     const agregar = () => {
-        onAdd(contador);
+        console.log(contador);
     }
     
     return (
