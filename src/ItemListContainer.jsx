@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList'
-import React, { useState, useEffect } from 'react'
+import { instrumentos } from './helpers/getFetch'
+
 
 
 const getFetch = () => {
@@ -18,15 +19,15 @@ function ItemListContainer(props) {
   
   const {greeting} = props;
 
-  const (instrumentos, setInstrumentos) = useState([]);
+  const [instrumentos, setInstrumentos] = useState([]);
 
 useEffect(() => {
   getFetch()
-    .then((resuelto)=> {setInstrumentos(resuelto)});
-    .catch(error => console.log("no resuelto"));
-    .finally(() => console.log());
+    .then( (resuelto)=> setInstrumentos(resuelto) ) 
+    .catch( error => console.log("no resuelto") )
+    .finally( () => console.log("promesa finalizada") )
 
-} )
+} );
 
 
 
@@ -37,7 +38,7 @@ useEffect(() => {
         <h2>{greeting}</h2>
       </div>
       <div className='contenedorSecundario'>
-        <ItemList />
+        <ItemList productos={ instrumentos }/>
         <ItemCount />
       </div>
     </>
