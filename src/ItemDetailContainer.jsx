@@ -2,13 +2,10 @@ import React, { useState, useEffect } from 'react'
 import ItemDetail from './ItemDetail'
 import { instrumentos } from './helpers/getFetch'
 
-const instrumentoRandom = Math.floor(Math.random()*instrumentos.length);
-const productoRandom = instrumentos[instrumentoRandom]
-
 const getFetch = () => {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
-          resolve(productoRandom); 
+          resolve(instrumentos); 
       }, 2000);
       
   });

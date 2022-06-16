@@ -10,5 +10,7 @@ export const instrumentos = [
 
 
 
-
-const productoRandom = Math.floor(Math.random()*instrumentos.length);
+/*
+const instrumentoRandom = Math.floor(Math.random()*instrumentos.length);
+const productoRandom = instrumentos[instrumentoRandom]
+*/
