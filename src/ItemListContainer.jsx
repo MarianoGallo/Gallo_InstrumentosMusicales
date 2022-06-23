@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import ItemCount from './ItemCount'
 import ItemList from './ItemList'
-import { instrumentos } from './helpers/getFetch'
+import { getFetch } from './helpers/getFetch'
 
 
 
-const getFetch = () => {
+/*const getFetch = () => {
   return new Promise((resolve, reject) => {
       setTimeout(() => {
           resolve(instrumentos); 
       }, 2000);
       
   });
-};
+};*/
 
 
 function ItemListContainer(props) {
@@ -20,16 +20,12 @@ function ItemListContainer(props) {
   const {greeting} = props;
 
   const [instrumentos, setInstrumentos] = useState([]);
+  const [loading, setLoading] = useState (true)
 
 useEffect(() => {
   getFetch()
-    .then( (resuelto)=> setInstrumentos(resuelto) ) 
-    .catch( error => console.log("no resuelto") )
-    .finally( () => console.log("promesa finalizada") )
-
+    .then(resp)
 } );
-
-
 
   return (
     <>
@@ -38,7 +34,7 @@ useEffect(() => {
         <h2>{greeting}</h2>
       </div>
       <div className='contenedorSecundario'>
-        <ItemList productos={ instrumentos }/>
+        <ItemList productos={ getFetch }/>
         <ItemCount />
       </div>
     </>
