@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react'
+import { getFetchOne } from './helpers/getFetch';
 import ItemDetail from './ItemDetail'
+
 
 
 
 const ItemDetailContainer = () => {
 
-  const [productoRandom, setProductoRandom] = useState({});
+  const [productoDetalle, setProductoDetalle] = useState({});
 
   useEffect(() => {
     getFetchOne()
-      .then( (resuelto)=> setProductoRandom(resuelto) ) 
+      .then( (resuelto)=> setProductoDetalle(resuelto) ) 
       .catch( err => console.log("Error") )
       .finally( () => console.log("promesa finalizada") )
   
@@ -18,7 +20,7 @@ const ItemDetailContainer = () => {
   return (
     <>
     <div>ItemDetailContainer</div>
-    <ItemDetail producto= { productoRandom } />
+    <ItemDetail producto= { productoDetalle } />
     </>
   )
 }

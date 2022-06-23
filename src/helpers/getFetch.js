@@ -14,11 +14,10 @@ let instrumentos = [
         { id: 'GE-0002', name: 'Fender Telecaster', imageUrl:'imagenes/GE-0002.jpg', descripcion: 'Guitarra electrica.', precio: '$187500', stock: 6 },
     ];
 
-//export const getFetch = () =>{
+
 export const getFetch = (id) =>{
         return new Promise((resolve, reject) => {
             setTimeout( ()=>{
-                //resolve(instrumentos)
                 if (id) {
                     resolve(instrumentos.find(producto => producto.id === id))       
                 } else {
@@ -27,7 +26,7 @@ export const getFetch = (id) =>{
             }, 3000)
         })
 }
-//}
+
     
 let instrumento = { id: 'GE-0001', name: 'MAG Epsilon', imageUrl:'imagenes/MAG_Guitar_03.jpg', descripcion: 'Guitarra adaptable a usuarios con destreza izquierda o derecha.', precio: '$187500', stock: 6 }
 
@@ -43,7 +42,3 @@ export const getFetchOne = () =>{
 
 
 
-/*
-const instrumentoRandom = Math.floor(Math.random()*instrumentos.length);
-const productoRandom = instrumentos[instrumentoRandom]
-*/
